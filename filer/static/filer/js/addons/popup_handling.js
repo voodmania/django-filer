@@ -7,15 +7,14 @@
         win.close();
     };
     window.dismissRelatedImageLookupPopup = function (win, chosenId, chosenThumbnailUrl, chosenDescriptionTxt) {
-        var name = window.windowname_to_id(win.name);
-        var nameElement = $('#' + name);
-        var id = nameElement.data('id');
-        var img = $('#' + id + '_thumbnail_img');
-        var txt = $('#' + id + '_description_txt');
-        var clear = $('#' + id + '_clear');
-        var lookup = $('#' + id + '_lookup');
-        var dropzoneMessage = $('#' + id + '_filer_dropzone_message');
-        var elem = $('#' + id);
+        var id = window.windowname_to_id(win.name);
+        var lookup = $('#' + id);
+        var container = lookup.closest('.filerFile');
+        var img = container.find('.thumbnail_img');
+        var txt = container.find('.description_text');
+        var clear = container.find('.filerClearer');
+        var dropzoneMessage = container.siblings('.dz-message');
+        var elem = container.find(':input');
         var oldId = elem.value;
 
         elem.val(chosenId);

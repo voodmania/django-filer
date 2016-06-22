@@ -11,7 +11,7 @@
         var addImageButton = $(base_id + '_lookup');
         var dropzoneMessage = $(base_id + '_filer_dropzone_message');
         var hiddenClass = 'hidden';
-        var static_prefix = clearer.attr('src').replace('admin/img/icon_deletelink.gif', 'filer/');
+        var static_prefix = clearer.attr('src').replace('filer/img/icon_deletelink.gif', 'filer/');
 
         clearer.hide();
         hidden_input.removeAttr('value');
